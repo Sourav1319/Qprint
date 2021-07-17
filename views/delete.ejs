@@ -1,0 +1,23 @@
+<%-include("./partials/header")%>
+
+<div class="container">
+	
+		<h2 style="margin-top:100px;"class="text-center">Make sure to fill the Correct Google drive link</h2>
+		<div style="width:30%;margin:20px auto;">
+			<form class="" method="POST" action="/user/<%=url%>/delete">
+				<div class="form-group">
+					<input class="form-control" type="text" name="title" placeholder="title">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="link" placeholder="Gdrive Link">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-danger btn-block">Delete</button>
+				</div>
+			</form>
+			<a href='/user/<%=url%>'>Go Back</a>
+		</div>
+</div>
+
+
+<%-include("./partials/footer")%>

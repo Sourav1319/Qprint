@@ -26,6 +26,9 @@ app.get('/admin',async (req,res)=>{
 app.get('/delete',(req,res)=>{
 	res.render('admindelete');
 })
+app.get('/about',(req,res)=>{
+	res.render('about');
+})
 app.post('/delete',async(req,res)=>{
 	await userdb_repo.admindelete(req.body);
 	res.redirect('/admin');
@@ -120,6 +123,7 @@ function valid(req,res,next){
 	res.redirect('/signin');
 }
 
-app.listen(3000,(req,res)=>{
-	console.log("Server running on port 3000");
-});
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
+}) 

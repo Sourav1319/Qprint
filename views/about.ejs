@@ -1,0 +1,26 @@
+<%-include("./partials/header")%>
+<div class="container text-center">
+<br><br>
+ <p><h3>How this works?</strong></p></h3>
+ This site basically acts as a connection between students and the person who owns the printer(admin),
+ Students can signup and add the required documents title and link(Gdrive link preferably, Since i am using a custom built database, this site become too slow, if direct files are allowed to be uploaded)
+
+ <br>
+ All the files then reaches the admin page in sequential manner, as soon admin prints the required student page he will delete it, that's the only way of knowing from the student side if his/her document is printed or not, i know this is not user friendly but it slows down the site too much.
+ <br>
+
+ Each page is protected through authentication so one can only access other/admin page with permission from the required user.Each student page can only be viewed by the registered person, so each of their docs remain secure. 
+
+ Admin have permissions to only read and edit the file.<br>One can view the admin page by using the username:Admin and password:secret_password.
+ <br><br><br>
+ <h3>Inspiration</strong></h3>
+ The idea is a improvisation over one of my friend's idea, PS:The guy is totally awesome :)
+ <br><br><br>
+ 
+
+ <h3> Tech Stack used to built this site</h3><br>
+ Everything in this project is done only using javascript,node.js and bootstrap( for CSS), most of the code is built from scratch like authentication(only cookie-session is used), database handling( it gives you too much freedom to handle the data if you are the one actually handling it, this makes the project-building and debugging a lot easier).
+
+
+</div>
+<%-include("./partials/footer")%>

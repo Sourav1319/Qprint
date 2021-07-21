@@ -10,6 +10,7 @@ app.use(cookieSession({
 	keys:['1234567']
 }));
 app.set("view engine","ejs");
+app.use(express.static(__dirname+"/public"));
 
 app.get('/',(req,res)=>{
 	res.redirect('/signin');
@@ -120,6 +121,9 @@ app.get('/user/:id',valid,async (req,res)=>{
 	res.render('userpage',{info:await userdb_repo.getById(req.params.id)});
 })
 
+app.get('/:id',(req,res)=>{
+	res.send('<img style="width:100%;" src="/images/404.gif">');
+})
 function valid(req,res,next){
 	if(req.session.userID===req.params.id){
 		return next();

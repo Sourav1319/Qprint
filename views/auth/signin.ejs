@@ -3,11 +3,22 @@
 	.pp{
 	color:red;
 	}
-</style>
+	.ig {
+  background: url(images/img.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+  color:white !important;
+}
+html, body {margin: 0; height: 100%; overflow: hidden}
 
+</style>
+<div class="ig">
 <div class="container">
 	
-		<h2 style="margin-top:100px;"class="text-center">Sign In </h2>
+		<h2 style="padding-top:150px;"class="text-center">Sign In </h2>
 		<div style="width:30%;margin:20px auto;">
 			<form class="" method="POST" action="/signin">
 				<div class="form-group">
@@ -30,6 +41,6 @@
 			Didn't have an account? <a href="/signup">Sign up</a>
 		</div>
 </div>
-
+</div>
 
 <%-include("../partials/footer")%>
